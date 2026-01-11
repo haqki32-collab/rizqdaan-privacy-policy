@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legal Center - RizqDaan Official</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        .legal-content h1, .legal-content h2, .legal-content h3 { color: #002f34; font-weight: 800; }
+        .legal-content p, .legal-content li { color: #475569; line-height: 1.8; margin-bottom: 1.25rem; font-size: 0.95rem; }
+        .clause-box { border-left: 5px solid #002f34; padding-left: 1.5rem; margin: 2.5rem 0; background: #f8fafc; padding: 2rem; border-radius: 0 1.5rem 1.5rem 0; box-shadow: inset 0 2px 4px rgba(0,0,0,0.02); }
+        .nav-link { transition: all 0.3s ease; border-left: 2px solid transparent; padding-left: 0.5rem; }
+        .nav-link:hover { color: #002f34; border-left: 3px solid #002f34; padding-left: 1rem; background: #f1f5f9; }
+        .active-tab { border-bottom: 4px solid #002f34; color: #002f34 !important; font-weight: 900; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; }
+        .whatsapp-float { position: fixed; bottom: 30px; right: 30px; background: #25d366; color: white; padding: 15px 25px; border-radius: 50px; font-weight: 800; box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4); z-index: 1000; display: flex; align-items: center; gap: 10px; transition: all 0.3s; }
+        .whatsapp-float:hover { transform: translateY(-5px); background: #128c7e; }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.35.0",
+    "firebase/": "https://esm.sh/firebase@^12.7.0/",
+    "@capacitor/app": "https://esm.sh/@capacitor/app@^8.0.0",
+    "recharts": "https://esm.sh/recharts@^3.6.0",
+    "@capacitor/cli": "https://esm.sh/@capacitor/cli@^8.0.0",
+    "vite": "https://esm.sh/vite@^7.3.1",
+    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.2"
+  }
+}
+</script>
+</head>
+<body class="bg-slate-50 text-slate-900">
+
+    <!-- WhatsApp Support Float -->
+    <a href="https://wa.me/92370957756" target="_blank" class="whatsapp-float">
+        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.407 3.481 2.239 2.24 3.477 5.23 3.475 8.411-.003 6.557-5.338 11.892-11.893 11.892-1.997-.001-3.951-.5-5.688-1.448l-6.394 1.664zm6.222-3.528c1.552.92 3.51 1.405 5.621 1.406 5.543 0 10.054-4.51 10.057-10.055.002-2.686-1.047-5.212-2.952-7.118-1.904-1.905-4.432-2.952-7.118-2.952-5.544 0-10.054 4.51-10.057 10.055-.001 2.112.553 4.17 1.602 5.962l-.999 3.649 3.846-.947zm11.387-5.477c-.31-.156-1.834-.905-2.113-1.006-.279-.101-.482-.151-.684.151-.202.302-.782 1.006-.958 1.207-.176.202-.352.227-.662.071-.31-.156-1.311-.484-2.498-1.543-.923-.824-1.547-1.841-1.728-2.143-.181-.303-.019-.466.136-.621.14-.14.31-.362.466-.543.156-.181.208-.31.31-.517.103-.207.052-.387-.026-.543-.078-.156-.684-1.649-.938-2.261-.247-.597-.499-.516-.684-.525-.176-.008-.378-.009-.58-.009s-.53.076-.807.378c-.278.302-1.061 1.037-1.061 2.531s1.087 2.946 1.239 3.148c.152.202 2.139 3.267 5.182 4.581.724.312 1.288.499 1.728.639.728.231 1.389.198 1.912.12.583-.087 1.834-.751 2.09-1.477.256-.725.256-1.348.179-1.477-.076-.128-.278-.204-.588-.36z"/></svg>
+        WhatsApp Support
+    </a>
+
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-xl border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+            <div class="flex items-center gap-4">
+                <div class="w-14 h-14 bg-[#002f34] rounded-2xl flex items-center justify-center text-white font-black text-3xl shadow-2xl shadow-[#002f34]/30">R</div>
+                <div>
+                    <h1 class="text-3xl font-black tracking-tighter text-[#002f34] leading-none">RizqDaan</h1>
+                    <p class="text-[11px] font-black text-slate-400 uppercase tracking-[0.3em] mt-1.5">Official Compliance Dashboard</p>
+                </div>
+            </div>
+            <div class="hidden lg:flex items-center gap-8">
+                <div class="flex items-center gap-2 text-green-600 font-bold text-sm">
+                    <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+                    Systems Operational
+                </div>
+                <a href="https://wa.me/92370957756" class="bg-[#002f34] text-white px-8 py-3.5 rounded-full text-xs font-black hover:scale-105 transition-all shadow-xl">WHATSAPP HELP DESK</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Area -->
+    <div class="bg-[#002f34] text-white pt-24 pb-40 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]"></div>
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="inline-block px-4 py-2 bg-white/10 rounded-full text-[10px] font-black tracking-widest uppercase mb-8 border border-white/20 backdrop-blur-md">Official Legal Documentation v5.0</div>
+            <h2 class="text-5xl lg:text-8xl font-black tracking-tighter leading-[0.85] mb-10">Legal Integrity &<br>Privacy Framework.</h2>
+            <p class="text-xl lg:text-2xl text-slate-300 font-light max-w-3xl leading-relaxed">Detailed analysis and legal bindings regarding the collection, processing, and protection of data within the RizqDaan ecosystem in Pakistan.</p>
+        </div>
+    </div>
+
+    <!-- Main Content Grid -->
+    <div class="max-w-7xl mx-auto px-6 -mt-20 relative z-20 lg:grid lg:grid-cols-12 lg:gap-16 pb-40">
+        
+        <!-- Navigation Sidebar -->
+        <aside class="hidden lg:block lg:col-span-3">
+            <div class="sticky top-32 space-y-10">
+                <div class="bg-white p-8 rounded-[2.5rem] shadow-xl border border-slate-100">
+                    <h3 class="text-[11px] font-black text-slate-400 uppercase tracking-widest mb-6">Navigation Map</h3>
+                    <nav class="flex flex-col gap-4 text-xs font-black text-slate-500 uppercase tracking-wider">
+                        <a href="#intro" class="nav-link">01. Legal Introduction</a>
+                        <a href="#data-collection" class="nav-link">02. Data Acquisition</a>
+                        <a href="#usage" class="nav-link">03. Usage Policies</a>
+                        <a href="#permissions" class="nav-link">04. Hardware Permissions</a>
+                        <a href="#third-party" class="nav-link">05. External Service Providers</a>
+                        <a href="#retention" class="nav-link">06. Deletion Protocol</a>
+                        <a href="#rules" class="nav-link">07. Marketplace Ethics</a>
+                        <a href="#liability" class="nav-link">08. Liability Caps</a>
+                        <a href="#jurisdiction" class="nav-link">09. Governing Laws</a>
+                    </nav>
+                </div>
+                <div class="bg-green-50 p-8 rounded-[2.5rem] border border-green-100">
+                    <h4 class="text-green-800 font-black text-lg mb-2">Live Support</h4>
+                    <p class="text-green-700 text-xs mb-6 font-medium">For legal inquiries or dispute resolution, contact our specialized WhatsApp team.</p>
+                    <a href="https://wa.me/92370957756" class="flex items-center justify-center gap-2 w-full py-4 bg-green-600 text-white rounded-2xl font-black text-[10px] uppercase tracking-widest shadow-lg hover:bg-green-700 transition-all">Start Chat</a>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Document Body -->
+        <main class="lg:col-span-9 space-y-24">
+            
+            <!-- SECTION: INTRO -->
+            <section id="intro" class="legal-content bg-white p-10 lg:p-16 rounded-[3rem] shadow-sm border border-slate-100">
+                <h2 class="text-3xl mb-8">01. Legal Preamble and Identification</h2>
+                <p>This Comprehensive Legal Framework ("Agreement") establishes the terms of relationship between <strong>RizqDaan Platform</strong> (hereinafter "the Company", "We", "Us", or "Our") and any person or entity accessing the RizqDaan Mobile Application (hereinafter "the User", "Vendor", or "You").</p>
+                <p>RizqDaan operates as a digital intermediary platform specializing in multi-vendor business listings, service provision advertising, and peer-to-peer commerce specifically optimized for the Pakistani demographic. By creating an account, posting a listing, or browsing content, you explicitly and irrevocably consent to the clauses outlined in this document. If you find any provision herein objectionable, you are mandated to terminate your session and uninstall the software immediately.</p>
+                <div class="clause-box">
+                    <h4 class="font-black text-sm uppercase mb-3">Constitutional Binding</h4>
+                    <p class="text-sm">This agreement satisfies the requirements of the Electronic Transactions Ordinance, 2002, and the Prevention of Electronic Crimes Act (PECA), 2016, of Pakistan. It serves as a binding electronic contract with the same legal standing as a physical deed.</p>
+                </div>
+            </section>
+
+            <!-- SECTION: DATA COLLECTION -->
+            <section id="data-collection" class="legal-content">
+                <h2 class="text-3xl mb-8">02. Data Acquisition and Classification</h2>
+                <p>Our infrastructure is designed to maintain a high-trust marketplace environment. Consequently, we collect three primary tiers of data:</p>
+                
+                <h3 class="text-lg mt-8 mb-4">A. Identity and KYC Data</h3>
+                <p>Upon registration, we require: Full Legal Name, Verified Mobile Number (linked to CNIC via external verification where applicable), Electronic Mail Address, and Precise Business Location. For Vendors, we additionally store Shop Name, Business Address, and verification status.</p>
+
+                <h3 class="text-lg mt-8 mb-4">B. Behavioral and Content Metadata</h3>
+                <p>This includes every listing created, image uploaded, chat interaction initiated within the application, search history, items marked as favorites, and interactions with promoted/featured content. We store these to ensure platform safety and provide personalized recommendations.</p>
+
+                <h3 class="text-lg mt-8 mb-4">C. Technical Device Forensics</h3>
+                <p>To prevent multi-account fraud and bot activities, we collect device-specific identifiers including IMEI, MAC Address, IP Address (for geo-locking), OS version, and battery health telemetry to distinguish human users from automated scripts.</p>
+            </section>
+
+            <!-- SECTION: PERMISSIONS -->
+            <section id="permissions" class="bg-[#002f34] text-white p-10 lg:p-20 rounded-[4rem] shadow-2xl">
+                <h2 class="text-3xl mb-10 text-teal-400">03. Hardware Permissions Matrix</h2>
+                <p class="text-slate-300 mb-10">To ensure the highest quality experience, the RizqDaan App requests access to the following hardware components. Your refusal to grant these will result in limited app functionality.</p>
+                
+                <div class="space-y-6">
+                    <div class="flex gap-6 border-b border-white/10 pb-6">
+                        <div class="text-2xl opacity-50">📍</div>
+                        <div>
+                            <h4 class="font-black uppercase tracking-widest text-sm mb-1">Precise Geolocation (GPS)</h4>
+                            <p class="text-xs text-slate-400 leading-relaxed">Purpose: To calculate the exact distance between buyers and sellers, enable "Nearby Deals" features, and verify that vendors are operating from their claimed physical locations.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-6 border-b border-white/10 pb-6">
+                        <div class="text-2xl opacity-50">📸</div>
+                        <div>
+                            <h4 class="font-black uppercase tracking-widest text-sm mb-1">Camera and Visual Optics</h4>
+                            <p class="text-xs text-slate-400 leading-relaxed">Purpose: To allow vendors to capture high-definition images of their inventory, shops, or certificates for real-time verification and ad creation.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-6 border-b border-white/10 pb-6">
+                        <div class="text-2xl opacity-50">📁</div>
+                        <div>
+                            <h4 class="font-black uppercase tracking-widest text-sm mb-1">Internal and External Storage</h4>
+                            <p class="text-xs text-slate-400 leading-relaxed">Purpose: To cache application assets for offline viewing, store generated ad reports, and upload existing product photos from the user's gallery.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-6">
+                        <div class="text-2xl opacity-50">🎙️</div>
+                        <div>
+                            <h4 class="font-black uppercase tracking-widest text-sm mb-1">Acoustic Input (Microphone)</h4>
+                            <p class="text-xs text-slate-400 leading-relaxed">Purpose: Specifically for sending voice notes within the internal chat module and future video-listing components with audio descriptions.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION: THIRD PARTIES -->
+            <section id="third-party" class="legal-content">
+                <h2 class="text-3xl mb-8">04. Disclosure to Third-Party Nodes</h2>
+                <p>RizqDaan leverages international-grade cloud infrastructure. Your data is processed by:</p>
+                <ul class="list-disc ml-8 space-y-6 mt-6">
+                    <li><strong>Google Firebase Infrastructure:</strong> For real-time database management, secure authentication tokens, and push notification delivery. All data resides in secure regional clusters.</li>
+                    <li><strong>Cloudinary Global CDN:</strong> All visual media (photos/videos) are stored and optimized via Cloudinary's encrypted storage facilities to ensure rapid loading across Pakistan.</li>
+                    <li><strong>Gemini AI (Google LLM):</strong> If you utilize the "AI Description Writer," your keywords are sent to Google's LLM models to generate professional ad text. No PII is attached to these prompts.</li>
+                    <li><strong>Local Payment Gateway Partners:</strong> Transaction IDs for wallet top-ups are verified via secure APIs. We never store your EasyPaisa/JazzCash PINs or passwords.</li>
+                </ul>
+            </section>
+
+            <!-- SECTION: DELETION -->
+            <section id="retention" class="legal-content bg-red-50 p-10 lg:p-16 rounded-[3rem] border border-red-100">
+                <h2 class="text-3xl mb-8 text-red-600">05. Data Sovereignty and Account Deletion</h2>
+                <p>We respect your "Right to be Forgotten." In full compliance with Google Play Store's Data Safety policies, we provide a transparent deletion protocol.</p>
+                <div class="clause-box border-red-600 bg-white">
+                    <h4 class="font-black text-sm text-red-600 uppercase mb-4 underline">Deletion Execution Steps:</h4>
+                    <ol class="list-decimal ml-6 text-sm space-y-4 font-bold text-slate-700">
+                        <li>Access the <strong>Account</strong> interface in the bottom navigation.</li>
+                        <li>Engage the <strong>Settings (Gear Icon)</strong>.</li>
+                        <li>Locate and trigger <strong>"Delete Account Permanently"</strong>.</li>
+                        <li>Verify identity via PIN or Password.</li>
+                    </ol>
+                </div>
+                <p class="text-xs text-slate-500 italic"><strong>System Impact:</strong> Upon confirmation, your profile is immediately hidden from public view. Our automated scrubbers will purge your listings, chats, and personal identifiers from our live servers within 48 hours. Legal backups (transactional data for tax auditing) are retained for 7 years in an anonymized, non-reversible format as per Pakistan law.</p>
+            </section>
+
+            <!-- SECTION: PROHIBITED ITEMS -->
+            <section id="rules" class="legal-content bg-white p-10 lg:p-16 rounded-[3rem] shadow-sm border border-slate-100">
+                <h2 class="text-3xl mb-8">06. Prohibited Content and Conduct</h2>
+                <p>RizqDaan maintains a strict zero-tolerance policy. Posting the following will result in an immediate and permanent BAN without wallet refund:</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
+                    <div class="bg-gray-50 p-4 rounded-xl text-xs font-bold border-l-4 border-red-500">🚫 WEAPONS & FIREARMS</div>
+                    <div class="bg-gray-50 p-4 rounded-xl text-xs font-bold border-l-4 border-red-500">🚫 NARCOTICS & ILLEGAL DRUGS</div>
+                    <div class="bg-gray-50 p-4 rounded-xl text-xs font-bold border-l-4 border-red-500">🚫 ADULT & SEXUAL CONTENT</div>
+                    <div class="bg-gray-50 p-4 rounded-xl text-xs font-bold border-l-4 border-red-500">🚫 STOLEN VEHICLES/PROPERTY</div>
+                    <div class="bg-gray-50 p-4 rounded-xl text-xs font-bold border-l-4 border-red-500">🚫 COUNTERFEIT CURRENCY</div>
+                    <div class="bg-gray-50 p-4 rounded-xl text-xs font-bold border-l-4 border-red-500">🚫 FINANCIAL FRAUD / PONZI SCHEMES</div>
+                </div>
+            </section>
+
+            <!-- SECTION: LIABILITY -->
+            <section id="liability" class="legal-content">
+                <h2 class="text-3xl mb-8">07. Limitation of Liability and Indemnity</h2>
+                <p>RIZQDAAN IS A PASSIVE CONDUIT. THE COMPANY DOES NOT INSPECT GOODS IN PERSON. YOU AGREE TO INDEMNIFY RIZQDAAN FROM ANY LOSSES ARISING FROM EXTERNAL TRANSACTIONS. WE ARE NOT LIABLE FOR THE CONDUCT, WHETHER ONLINE OR OFFLINE, OF ANY USER OF THE SERVICE. OUR TOTAL LIABILITY IN ANY DISPUTE IS LIMITED TO THE AMOUNT OF THE AD PROMOTION FEE PAID BY YOU FOR THAT SPECIFIC LISTING.</p>
+            </section>
+
+            <!-- Final Support Section -->
+            <section class="bg-gradient-to-br from-green-500 to-green-700 text-white p-12 lg:p-24 rounded-[4rem] text-center shadow-2xl relative overflow-hidden">
+                <div class="absolute -top-20 -right-20 w-80 h-80 bg-white/10 rounded-full"></div>
+                <h4 class="text-4xl font-black mb-6">Need Legal Assistance?</h4>
+                <p class="text-green-100 mb-12 max-w-xl mx-auto text-lg">For all compliance reports, copyright claims (DMCA), or user disputes, our WhatsApp Legal Desk is available 24/7.</p>
+                <div class="flex flex-col sm:flex-row justify-center gap-6">
+                    <a href="https://wa.me/92370957756" class="px-16 py-5 bg-white text-green-700 font-black uppercase text-sm tracking-[0.2em] rounded-full hover:scale-105 transition-all shadow-2xl">Open WhatsApp Support</a>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-slate-200 py-20">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <div class="flex items-center justify-center gap-2 mb-6">
+                <div class="w-8 h-8 bg-[#002f34] rounded-lg flex items-center justify-center text-white font-bold text-sm">R</div>
+                <span class="font-black text-[#002f34] tracking-tighter">RizqDaan Platform</span>
+            </div>
+            <p class="text-[11px] font-black text-slate-400 uppercase tracking-[0.5em] mb-8 leading-loose">
+                Registered in Pakistan • Cyber Law Compliant • PII Protection Guaranteed<br>
+                © 2026 RizqDaan Official. All Rights Reserved.
+            </p>
+            <div class="flex justify-center flex-wrap gap-8 text-[10px] font-black text-slate-400">
+                <span class="hover:text-primary cursor-pointer">PRIVACY POLICY</span>
+                <span class="hover:text-primary cursor-pointer">TERMS OF SERVICE</span>
+                <span class="hover:text-primary cursor-pointer">DATA DELETION</span>
+                <span class="hover:text-primary cursor-pointer">JURISDICTION: PAKISTAN</span>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
